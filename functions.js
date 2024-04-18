@@ -19,6 +19,8 @@ function checkElement(array, index) {
  // Example
    const numbers = [1, -2, 0, 3, -4];
    console.log(checkElement(numbers, 3));
+
+   
   // Q3: Given an array of objects, where each object represents an employee with an id, name, and salary property, write a function that returns a new array of employee objects sorted by their salary in ascending order.
    function sortBySalary(employees) {
     return employees.sort((a, b) => a.salary - b.salary);

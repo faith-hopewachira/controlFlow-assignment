@@ -2,24 +2,30 @@
 // four items multiplied by itself  and the last two added by 10. Return the array with the new values
 
 const multiplyBy2 = (nums)=>{
-    let newArr = []
-    const firstFour = nums.slice(0,4)
-    const myArray = firstFour.map(element => element * element)  
-        console.log(myArray)
+    // const firstFour = nums.slice(0,4)
+    // const myArray = firstFour.map(element => element * element)  
+    //     console.log(myArray)
 
-        const numbersB = nums.slice(4,-2)
+    //     const newNums = nums.slice(4,-2)
 
-        const last = nums.slice(-2)
-        const c = last.map(element => element +2)
-        console.log(c)
+    //     const last = nums.slice(-2)
+    //     const c = last.map(element => element +10)
+    //     console.log(c)
 
-        const neww = myArray.concat(numbersB).concat(c)
-        console.log(neww)
+    //     const neww = myArray.concat(newNums).concat(c)
+    //     console.log(neww)
 
-    
+    const newArray = []
+    nums.slice(0,4).forEach(item=>{
+        newArray.push(item*item);
+    })
+
+    newArray.push(nums.length-2 + 10)
+    return newArray
 
 }
-multiplyBy2(nums(1,2,3,4,5))
+let nums = [1,2,3,4,5]
+console.log(multiplyBy2(nums))
 
 // Write a program that takes in the following array and use a while loop to iterate and break 
 // when the item is equal to the fourth index :let arrNum = [1,2,3,4,5,6,7,8,9];
